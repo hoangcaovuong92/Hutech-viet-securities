@@ -1,0 +1,79 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return signedIn()
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    match /users/{userId} {
+      allow create: if signedIn()
+        && request.auth.uid == userId
+        && request.resource.data.role == 'customer'
+        && request.resource.data.isActive == true;
+
+      allow read: if signedIn()
+        && (request.auth.uid == userId || isAdmin());
+
+      allow update: if isAdmin()
+        || (signedIn()
+          && request.auth.uid == userId
+          && request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['fullName', 'phone', 'updatedAt']));
+
+      allow delete: if false;
+    }
+
+    match /registrations/{registrationId} {
+      allow create: if signedIn()
+        && request.resource.data.ownerId == request.auth.uid
+        && request.resource.data.status == 'pending';
+
+      allow get: if signedIn()
+        && (resource.data.ownerId == request.auth.uid || isAdmin());
+
+      allow list: if isAdmin();
+
+      allow update: if isAdmin()
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['status', 'updatedAt']);
+
+      allow delete: if false;
+    }
+
+    match /registration_identifiers/{identifierId} {
+      allow get: if signedIn();
+      allow list: if false;
+
+      allow create: if signedIn()
+        && (request.resource.data.ownerId == request.auth.uid || isAdmin())
+        && request.resource.data.keys()
+          .hasOnly(['type', 'ownerId', 'createdAt'])
+        && request.resource.data.type in ['cccd', 'phone', 'email'];
+
+      allow update, delete: if false;
+    }
+
+    match /broker_accounts/{accountNumber} {
+      allow get: if signedIn();
+      allow list: if false;
+
+      allow create: if signedIn()
+        && (request.resource.data.ownerId == request.auth.uid || isAdmin())
+        && request.resource.data.keys()
+          .hasOnly(['ownerId', 'registrationId', 'createdAt']);
+
+      allow update, delete: if false;
+    }
+
+    match /market_data/{marketId} {
+      allow read: if signedIn();
+      allow create, update, delete: if isAdmin();
+    }
+  }
+}
