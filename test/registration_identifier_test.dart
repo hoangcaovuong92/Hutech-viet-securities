@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lttbdd/flow_models/duplicate_registration_result.dart';
-import 'package:lttbdd/flow_services/registration_identifier.dart';
+import 'package:viet_securities/flow_models/duplicate_registration_result.dart';
+import 'package:viet_securities/flow_services/registration_identifier.dart';
 
 void main() {
   test('chuẩn hoá dữ liệu trước khi tạo khoá kiểm tra trùng', () {

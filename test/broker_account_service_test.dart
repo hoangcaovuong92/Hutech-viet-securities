@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lttbdd/flow_services/broker_account_service.dart';
+import 'package:viet_securities/flow_services/broker_account_service.dart';
 
 void main() {
   test('số tài khoản luôn bắt đầu bằng 099C và có đúng 6 chữ số', () {

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lttbdd/flow_models/registration_draft.dart';
+import 'package:viet_securities/flow_models/registration_draft.dart';
 
 void main() {
   test('RegistrationDraft chuyển đúng dữ liệu sang Firestore', () {

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lttbdd/market_models/market_snapshot.dart';
+import 'package:viet_securities/market_models/market_snapshot.dart';
 
 void main() {
   test('MarketQuote đọc đúng dữ liệu từ Firestore', () {
