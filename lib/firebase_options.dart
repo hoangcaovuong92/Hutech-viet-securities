@@ -41,48 +41,51 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDVrt9a4boGUXq-pWTGEk2idkAkAfbm0VI',
-    appId: '1:1001980510841:web:295c07696f98f8ecae4aa8',
-    messagingSenderId: '1001980510841',
-    projectId: 'lttbdd-83c66',
-    authDomain: 'lttbdd-83c66.firebaseapp.com',
-    storageBucket: 'lttbdd-83c66.firebasestorage.app',
-    measurementId: 'G-V6EJGXB7W8',
+    apiKey: 'AIzaSyD3iMdSFjrr-VVJWA3IKApwhvMjpSZUkCg',
+    appId: '1:265379010052:web:f3fddb669946aee4df0751',
+    messagingSenderId: '265379010052',
+    projectId: 'hutech-ac20a',
+    authDomain: 'hutech-ac20a.firebaseapp.com',
+    databaseURL: 'https://hutech-ac20a-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'hutech-ac20a.firebasestorage.app',
+    measurementId: 'G-EK1937EXTZ',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBt8G7HzdvbWx6cbyi7YOHJQmvJ7Kg9_8Y',
-    appId: '1:1001980510841:android:210fa63822322331ae4aa8',
-    messagingSenderId: '1001980510841',
-    projectId: 'lttbdd-83c66',
-    storageBucket: 'lttbdd-83c66.firebasestorage.app',
+    apiKey: 'AIzaSyDeGSti7p0pZnwxmSl_2ZmtVz6mpDjYvjk',
+    appId: '1:265379010052:android:545363415dfa53b4df0751',
+    messagingSenderId: '265379010052',
+    projectId: 'hutech-ac20a',
+    databaseURL: 'https://hutech-ac20a-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'hutech-ac20a.firebasestorage.app',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAYHgSsm6LDlr8Q3N3opRtEngAsF4jDV1w',
-    appId: '1:1001980510841:ios:b02295caf410fff3ae4aa8',
-    messagingSenderId: '1001980510841',
-    projectId: 'lttbdd-83c66',
-    storageBucket: 'lttbdd-83c66.firebasestorage.app',
-    iosBundleId: 'com.example.lttbdd',
+    apiKey: 'AIzaSyD_AzHhRNf8uEmMdZ1ZQsnoDcBfnYGsJ1Y',
+    appId: '1:265379010052:ios:553ef64b543f68efdf0751',
+    messagingSenderId: '265379010052',
+    projectId: 'hutech-ac20a',
+    databaseURL: 'https://hutech-ac20a-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'hutech-ac20a.firebasestorage.app',
+    iosBundleId: 'com.example.vietsecurities',
   );
-
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAYHgSsm6LDlr8Q3N3opRtEngAsF4jDV1w',
-    appId: '1:1001980510841:ios:b02295caf410fff3ae4aa8',
-    messagingSenderId: '1001980510841',
-    projectId: 'lttbdd-83c66',
-    storageBucket: 'lttbdd-83c66.firebasestorage.app',
-    iosBundleId: 'com.example.lttbdd',
+    apiKey: 'AIzaSyD_AzHhRNf8uEmMdZ1ZQsnoDcBfnYGsJ1Y',
+    appId: '1:265379010052:ios:553ef64b543f68efdf0751',
+    messagingSenderId: '265379010052',
+    projectId: 'hutech-ac20a',
+    databaseURL: 'https://hutech-ac20a-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'hutech-ac20a.firebasestorage.app',
+    iosBundleId: 'com.example.vietsecurities',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDVrt9a4boGUXq-pWTGEk2idkAkAfbm0VI',
-    appId: '1:1001980510841:web:aacef6fd210cae87ae4aa8',
-    messagingSenderId: '1001980510841',
-    projectId: 'lttbdd-83c66',
-    authDomain: 'lttbdd-83c66.firebaseapp.com',
-    storageBucket: 'lttbdd-83c66.firebasestorage.app',
-    measurementId: 'G-BX4FDPX6V2',
+    apiKey: 'AIzaSyD3iMdSFjrr-VVJWA3IKApwhvMjpSZUkCg',
+    appId: '1:265379010052:web:300fb27fab024626df0751',
+    messagingSenderId: '265379010052',
+    projectId: 'hutech-ac20a',
+    authDomain: 'hutech-ac20a.firebaseapp.com',
+    databaseURL: 'https://hutech-ac20a-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'hutech-ac20a.firebasestorage.app',
+    measurementId: 'G-HXK2BMEGD5',
   );
 }

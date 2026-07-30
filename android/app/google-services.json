@@ -1,21 +1,22 @@
 {
   "project_info": {
-    "project_number": "1001980510841",
-    "project_id": "lttbdd-83c66",
-    "storage_bucket": "lttbdd-83c66.firebasestorage.app"
+    "project_number": "265379010052",
+    "firebase_url": "https://hutech-ac20a-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "hutech-ac20a",
+    "storage_bucket": "hutech-ac20a.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1001980510841:android:210fa63822322331ae4aa8",
+        "mobilesdk_app_id": "1:265379010052:android:545363415dfa53b4df0751",
         "android_client_info": {
-          "package_name": "com.example.lttbdd"
+          "package_name": "com.example.vietsecurities"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBt8G7HzdvbWx6cbyi7YOHJQmvJ7Kg9_8Y"
+          "current_key": "AIzaSyDeGSti7p0pZnwxmSl_2ZmtVz6mpDjYvjk"
         }
       ],
       "services": {

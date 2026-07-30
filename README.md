@@ -93,7 +93,7 @@ Thiết lập trong Firebase Console:
 6. Deploy rules:
 
 ```bash
-firebase deploy --project lttbdd-83c66 --only firestore
+firebase deploy --project hutech-ac20a --only firestore
 ```
 
 ## Chạy ứng dụng
