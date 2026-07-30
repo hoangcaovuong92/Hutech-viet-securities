@@ -52,13 +52,17 @@ class _ScreenCccdHintTextState extends State<ScreenCccdHintText> {
           ? ScreenCccdDuplicatePopup(duplicate: duplicate)
           : ScreenIdentityCapture(draft: widget.draft);
       Navigator.of(context).push(MaterialPageRoute(builder: (_) => next));
-    } catch (_) {
+    } catch (error) {
       if (!mounted) return;
+      debugPrint('checkDuplicates failed: $error');
+      final message = error.toString().contains('operation-not-allowed')
+          ? 'Chưa bật Anonymous Authentication trên Firebase Console.'
+          : error.toString().contains('permission-denied')
+          ? 'Firestore từ chối quyền đọc. Kiểm tra Rules và đăng nhập.'
+          : 'Không thể kiểm tra thông tin trên Firebase. Vui lòng thử lại.';
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text(
-            'Không thể kiểm tra thông tin trên Firebase. Vui lòng thử lại.',
-          ),
+        SnackBar(
+          content: Text(message),
           backgroundColor: AppColors.danger,
         ),
       );
